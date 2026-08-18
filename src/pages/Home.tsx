@@ -8,7 +8,7 @@ import Contact from '../components/Contact';
 import { usePageTitle } from '../lib/usePageTitle';
 
 export default function Home() {
-  usePageTitle('Verma Healthcare | Trusted Pharmacy in Basholi — Ashok Kumar, G.M.C Jammu');
+  usePageTitle('Verma Healthcare | Trusted Pharmacy in Basholi — Ashok Kumar, JIAR');
   const [prefill, setPrefill] = useState<{ name: string; ts: number } | null>(null);
 
   const handleEnquire = useCallback((medicineName: string) => {
