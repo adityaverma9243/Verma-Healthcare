@@ -1,0 +1,6 @@
+# Robots.txt for Verma Healthcare
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+
+Sitemap: https://vermahealthcare.com/sitemap.xml

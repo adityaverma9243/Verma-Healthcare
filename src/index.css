@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+
+  --color-brand-50: #f0f7f4;
+  --color-brand-100: #dcefe6;
+  --color-brand-200: #bcded0;
+  --color-brand-300: #8fc5b1;
+  --color-brand-400: #5da58e;
+  --color-brand-500: #3d8871;
+  --color-brand-600: #2c6d5a;
+  --color-brand-700: #24574a;
+  --color-brand-800: #1f463c;
+  --color-brand-900: #1a3a32;
+  --color-brand-950: #0d211c;
+
+  --color-gold-100: #f7efd8;
+  --color-gold-200: #eeddab;
+  --color-gold-300: #e3c878;
+  --color-gold-400: #d4af4e;
+  --color-gold-500: #c19a2e;
+  --color-gold-600: #a07d20;
+
+  --color-cream: #f7f4ee;
+  --color-ink: #16241f;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 8rem;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}

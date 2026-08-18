@@ -1,603 +1,98 @@
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ashok Medical Store – Trusted Pharmacy Services</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    body {
-      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-      background: #f6f9fc;
-    }
-    .gradient-hero {
-      background: linear-gradient(135deg, #0b4d6b 0%, #1b7a6b 50%, #2f9e7f 100%);
-    }
-    .glass-card {
-      background: rgba(255, 255, 255, 0.75);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-    }
-    .shadow-card {
-      box-shadow: 0 10px 30px -5px rgba(10, 50, 50, 0.12), 0 10px 20px -10px rgba(0, 0, 0, 0.08);
-    }
-    .animate-fade-in {
-      animation: fadeIn 0.8s ease forwards;
-    }
-    .animate-slide-up {
-      animation: slideUp 0.6s ease forwards;
-    }
-    @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-    @keyframes slideUp {
-      0% { transform: translateY(20px); opacity: 0; }
-      100% { transform: translateY(0); opacity: 1; }
-    }
-    .hero-pulse {
-      animation: pulseGlow 3s infinite alternate;
-    }
-    @keyframes pulseGlow {
-      0% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.3); }
-      100% { box-shadow: 0 0 0 12px rgba(46, 204, 113, 0); }
-    }
-    .med-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 18px 30px -8px rgba(0, 0, 0, 0.15);
-    }
-    .med-card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .faq-item {
-      transition: background 0.2s ease;
-    }
-    .faq-item:hover {
-      background: #f1f5f9;
-    }
-    .contact-btn {
-      transition: all 0.2s ease;
-    }
-    .contact-btn:hover {
-      transform: scale(1.03);
-      background: #1f9e7a;
-    }
-    /* badge */
-    .badge {
-      background: linear-gradient(90deg, #0f4c5c, #2a7a6a);
-      color: white;
-      padding: 2px 12px;
-      border-radius: 20px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-      display: inline-block;
-    }
-    .nav-highlight {
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(6px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-    }
-    /* responsive tweaks */
-    @media (max-width: 640px) {
-      .hero-title {
-        font-size: 2.2rem;
-        line-height: 1.2;
-      }
-      .hero-subtitle {
-        font-size: 1rem;
-      }
-    }
-    /* custom scroll */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #eef2f7;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #2a7a6a;
-      border-radius: 8px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #0b4d6b;
-    }
-    .footer-link {
-      color: rgba(255, 255, 255, 0.7);
-      transition: color 0.2s ease;
-    }
-    .footer-link:hover {
-      color: #fff;
-    }
-    .map-placeholder {
-      background: linear-gradient(90deg, #d4e9ec, #c5e3db);
-      border: 1px dashed #2a7a6a;
-    }
-    .trust-icon {
-      color: #2a7a6a;
-    }
-    /* phone highlight in footer */
-    .phone-number {
-      color: #3bde7a;
-      font-weight: 600;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  </style>
+    <!-- Favicon: SVG + PNG fallbacks + Apple touch icon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <meta name="theme-color" content="#0d211c" />
+
+    <!-- Primary SEO tags -->
+    <title>Verma Healthcare | Trusted Pharmacy in Basholi — Ashok Kumar, G.M.C Jammu</title>
+    <meta name="description" content="Verma Healthcare — trusted pharmacy owned by Ashok Kumar (G.M.C Jammu) at Sheetal Nagar, Bhoond, Tehsil Basholi. A wide range of medicines and healthcare products, subject to availability and valid prescription requirements. Call 7006569462." />
+    <meta name="keywords" content="Verma Healthcare, pharmacy, medical store, chemist, Basholi, Bhoond, Sheetal Nagar, Jammu, medicines, healthcare products, Ashok Kumar" />
+    <meta name="author" content="Verma Healthcare" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://vermahealthcare.com/" />
+
+    <!-- Open Graph (Facebook, WhatsApp previews) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Verma Healthcare" />
+    <meta property="og:title" content="Verma Healthcare | Trusted Pharmacy in Basholi" />
+    <meta property="og:description" content="A wide range of medicines and healthcare products, subject to availability and valid prescription requirements. Owned by Ashok Kumar (G.M.C Jammu). Call 7006569462." />
+    <meta property="og:url" content="https://vermahealthcare.com/" />
+    <meta property="og:image" content="https://vermahealthcare.com/images/store-hero.jpg" />
+    <meta property="og:locale" content="en_IN" />
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Verma Healthcare | Trusted Pharmacy in Basholi" />
+    <meta name="twitter:description" content="A wide range of medicines and healthcare products. Owned by Ashok Kumar (G.M.C Jammu). Call 7006569462." />
+    <meta name="twitter:image" content="https://vermahealthcare.com/images/store-hero.jpg" />
+
+    <!-- Structured data: Pharmacy (LocalBusiness) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Pharmacy",
+      "name": "Verma Healthcare",
+      "description": "Trusted pharmacy owned by Ashok Kumar, qualified from Government Medical College (G.M.C), Jammu. A wide range of medicines and healthcare products, subject to availability and valid prescription requirements.",
+      "url": "https://vermahealthcare.com/",
+      "image": "https://vermahealthcare.com/images/store-hero.jpg",
+      "telephone": "+917006569462",
+      "priceRange": "₹₹",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sheetal Nagar, Bhoond, Tehsil Basholi",
+        "addressLocality": "Basholi",
+        "addressRegion": "Jammu & Kashmir",
+        "postalCode": "184201",
+        "addressCountry": "IN"
+      },
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "08:00",
+        "closes": "21:30"
+      }],
+      "founder": {
+        "@type": "Person",
+        "name": "Ashok Kumar",
+        "jobTitle": "Owner & Pharmacist",
+        "alumniOf": "Government Medical College (G.M.C), Jammu"
+      }
+    }
+    </script>
+            <script data-arena-recording="true">(function(){
+"use strict";
+var SK="__arena_rec",RRWEB_CDN="https://cdn.jsdelivr.net/npm/rrweb@2.0.0-alpha.4/dist/rrweb.min.js";
+var MAX_RECORDING_MS=600000,MAX_RRWEB_EVENTS=30000,MAX_INTERACTIONS=5000,MAX_CURSOR_POINTS=10000,recStopped=false;
+var stored=null;try{var raw=sessionStorage.getItem(SK);if(raw)stored=JSON.parse(raw);}catch(ex){}
+var meta=stored?stored.m||null:null,rrwebEvents=stored?stored.r||[]:[],rrwebStarted=false,startTime=stored?stored.st||Date.now():Date.now();
+var interactions=stored?stored.i||[]:[],cursorPath=stored?stored.c||[]:[],lastCursorSample=0,lastScrollSample=0;
+var pageHeight=document.documentElement.scrollHeight;
+var viewport={width:window.innerWidth,height:window.innerHeight};
+function isCapped(){if(recStopped)return true;if(Date.now()-startTime>=MAX_RECORDING_MS){recStopped=true;return true;}return false;}
+function persist(){try{var d=JSON.stringify({r:rrwebEvents,i:interactions,c:cursorPath,m:meta,st:startTime});sessionStorage.setItem(SK,d);}catch(ex){rrwebEvents=rrwebEvents.slice(Math.floor(rrwebEvents.length/2));try{sessionStorage.setItem(SK,JSON.stringify({r:rrwebEvents,i:interactions,c:cursorPath,m:meta,st:startTime}));}catch(ex2){}}}
+setInterval(persist,5000);
+window.addEventListener("resize",function(){viewport={width:window.innerWidth,height:window.innerHeight};pageHeight=document.documentElement.scrollHeight;});
+document.addEventListener("click",function(e){if(isCapped()||interactions.length>=MAX_INTERACTIONS)return;var el=e.target;var tag=el.tagName?el.tagName.toLowerCase():"";var text=(el.textContent||"").trim().substring(0,80);var classes=el.className&&typeof el.className==="string"?el.className.substring(0,120):"";interactions.push({type:"click",t:Date.now()-startTime,x:Math.round(e.clientX),y:Math.round(e.clientY),element:{tag:tag,text:text,classes:classes}});},true);
+window.addEventListener("scroll",function(){if(isCapped()||interactions.length>=MAX_INTERACTIONS)return;var now=Date.now();if(now-lastScrollSample<200)return;lastScrollSample=now;var scrollY=Math.round(window.scrollY||window.pageYOffset||0);var depthPct=pageHeight>viewport.height?Math.min(100,Math.round(((scrollY+viewport.height)/pageHeight)*100)):100;interactions.push({type:"scroll",t:now-startTime,y:scrollY,depth_pct:depthPct});},{passive:true});
+document.addEventListener("mousemove",function(e){if(isCapped()||cursorPath.length>=MAX_CURSOR_POINTS)return;var now=Date.now();if(now-lastCursorSample<250)return;lastCursorSample=now;cursorPath.push([Math.round(e.clientX),Math.round(e.clientY),now-startTime]);},{passive:true});
+document.addEventListener("keydown",function(e){if(isCapped()||interactions.length>=MAX_INTERACTIONS)return;if(e.target&&(e.target.tagName==="INPUT"||e.target.tagName==="TEXTAREA"))return;interactions.push({type:"keydown",t:Date.now()-startTime,key:e.key});},true);
+function buildAnalytics(){if(!meta)return null;var ph=document.documentElement.scrollHeight;var maxScroll=0,clickElements={},firstClick=null,firstScroll=null,totalDistance=0;for(var i=0;i<interactions.length;i++){var ev=interactions[i];if(ev.type==="scroll"){if(ev.depth_pct>maxScroll)maxScroll=ev.depth_pct;if(!firstScroll)firstScroll=ev.t;}if(ev.type==="click"){if(!firstClick)firstClick=ev.t;var key=ev.element.tag+":"+ev.element.text.substring(0,30);clickElements[key]=true;}}for(var j=1;j<cursorPath.length;j++){var dx=cursorPath[j][0]-cursorPath[j-1][0];var dy=cursorPath[j][1]-cursorPath[j-1][1];totalDistance+=Math.sqrt(dx*dx+dy*dy);}var duration=Date.now()-startTime;var clickHeatmap=[];for(var k=0;k<interactions.length;k++){if(interactions[k].type==="click")clickHeatmap.push([interactions[k].x,interactions[k].y]);}return{generation_id:meta.generationId,tournament_id:meta.tournamentId,started_at:new Date(startTime).toISOString(),ended_at:new Date().toISOString(),duration_ms:duration,viewport:viewport,page_height:ph,interactions:interactions,cursor_path:cursorPath,click_heatmap:clickHeatmap,summary:{total_clicks:clickHeatmap.length,total_scrolls:interactions.filter(function(e){return e.type==="scroll";}).length,max_scroll_depth_pct:maxScroll,unique_elements_clicked:Object.keys(clickElements).length,time_to_first_click_ms:firstClick,time_to_first_scroll_ms:firstScroll,cursor_distance_px:Math.round(totalDistance),active_time_ms:duration}};}
+function loadRrweb(){if(rrwebStarted)return;rrwebStarted=true;var s=document.createElement("script");s.src=RRWEB_CDN;s.onload=function(){var rec=(window.rrweb&&window.rrweb.record)||window.rrwebRecord;if(!rec)return;rec({emit:function(event){if(rrwebEvents.length>=MAX_RRWEB_EVENTS||isCapped())return;rrwebEvents.push(event);}});};s.onerror=function(){};document.head.appendChild(s);}
+window.addEventListener("message",function(e){if(!e.data||typeof e.data.type!=="string")return;if(e.data.type==="arena:init"){if(!meta)startTime=Date.now();meta={generationId:e.data.generationId||e.data.modelId,tournamentId:e.data.tournamentId};persist();loadRrweb();if(e.source)e.source.postMessage({type:"arena:init-ack",generationId:meta.generationId},"*");}if(e.data.type==="arena:flush"){var resp={type:"arena:recording-data",generationId:meta?meta.generationId:null,rrwebEvents:rrwebEvents,analytics:buildAnalytics()};try{sessionStorage.removeItem(SK);}catch(ex){}if(e.source)e.source.postMessage(resp,"*");}});
+loadRrweb();
+})();</script>
+  <script data-arena-views="true">(function(){var isTop=false;try{isTop=window.self===window.top;}catch(e){}if(!isTop)return;window.__ARENA_META={generationId:"qwen3.8-max",tournamentId:"0a4be24e-403b-43fa-a3ea-b4b1cf65293b"};var payload={tournamentId:"0a4be24e-403b-43fa-a3ea-b4b1cf65293b",modelId:"qwen3.8-max"};try{var r=document.referrer;if(r){var u=new URL(r);payload.referrerDomain=u.hostname;}}catch(e){}try{var vid=null;try{vid=localStorage.getItem('arena_vid');}catch(e){}if(!vid){vid=typeof crypto!=="undefined"&&crypto.randomUUID?crypto.randomUUID():(Date.now().toString(36)+Math.random().toString(36).slice(2)).slice(0,32);try{localStorage.setItem('arena_vid',vid);}catch(e){}}if(vid)payload.viewerId=vid;}catch(e){}try{fetch("https://www.designarena.ai/api/agon/page-views",{"method":"POST","headers":{"Content-Type":"application/json"},"body":JSON.stringify(payload),"keepalive":true});}catch(e){}})();</script>
 </head>
-<body>
-
-  <!-- ====== NAVIGATION ====== -->
-  <nav class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/70 backdrop-blur-md border-b border-gray-200/60 shadow-sm">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8 flex items-center justify-between h-16">
-      <!-- Logo -->
-      <a href="#" class="flex items-center gap-2 text-white hover:opacity-90 transition">
-        <span class="text-2xl"><i class="fas fa-prescription-bottle-alt"></i></span>
-        <span class="font-bold text-lg tracking-tight">Ashok <span class="text-teal-600">Medical</span></span>
-      </a>
-
-      <!-- Desktop links -->
-      <div class="hidden md:flex items-center gap-8 text-gray-700 font-medium">
-        <a href="#home" class="hover:text-teal-700 transition">Home</a>
-        <a href="#about" class="hover:text-teal-700 transition">About</a>
-        <a href="#services" class="hover:text-teal-700 transition">Services</a>
-        <a href="#faq" class="hover:text-teal-700 transition">FAQ</a>
-        <a href="#contact" class="hover:text-teal-700 transition">Contact</a>
-      </div>
-      <!-- Mobile toggle -->
-      <button id="mobileMenuBtn" class="md:hidden text-gray-700 text-2xl focus:outline-none" aria-label="Toggle menu">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-    <!-- mobile dropdown -->
-    <div id="mobileMenu" class="hidden md:hidden bg-white/95 backdrop-blur-md border-t border-gray-200/60 px-5 pb-4 pt-2 space-y-3 text-gray-700 font-medium">
-      <a href="#home" class="block py-1 hover:text-teal-700 transition">Home</a>
-      <a href="#about" class="block py-1 hover:text-teal-700 transition">About</a>
-      <a href="#services" class="block py-1 hover:text-teal-700 transition">Services</a>
-      <a href="#faq" class="block py-1 hover:text-teal-700 transition">FAQ</a>
-      <a href="#contact" class="block py-1 hover:text-teal-700 transition">Contact</a>
-    </div>
-  </nav>
-
-  <!-- ====== HERO ====== -->
-  <section id="home" class="gradient-hero min-h-screen flex items-center relative overflow-hidden pt-16">
-    <!-- subtle pattern overlay -->
-    <div class="absolute inset-0 opacity-10">
-      <div class="w-full h-full" style="background-image: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.15) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(255,255,255,0.1) 0%, transparent 50%);"></div>
-    </div>
-    <div class="max-w-7xl mx-auto px-5 sm:px-8 w-full relative z-10">
-      <div class="grid md:grid-cols-2 gap-10 items-center py-10 md:py-20">
-        <!-- left -->
-        <div class="text-white animate-fade-in">
-          <span class="badge bg-white/20 text-white border border-white/20 mb-4 inline-block">
-            <i class="fas fa-star text-xs mr-1"></i> Trusted Pharmacy Since 2002
-          </span>
-          <h1 class="hero-title text-4xl sm:text-5xl leading-tight font-bold mb-4">
-            Your Health, <br class="hidden sm:block">Our Priority.
-          </h1>
-          <p class="hero-subtitle text-lg sm:text-xl text-white/85 max-w-lg mb-6 leading-relaxed">
-            Ashok Medical Store – <span class="font-semibold text-teal-200">Owned by Ashok Kumar</span>, a qualified professional from <span class="font-semibold text-teal-200">G.M.C. Jammu</span>. We provide every kind of medicine for almost all diseases, with care and expertise.
-          </p>
-          <div class="flex flex-wrap gap-4">
-            <a href="#contact" class="inline-flex items-center gap-2 bg-white text-teal-800 font-semibold px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105 contact-btn">
-              <i class="fas fa-phone-alt"></i> Call Us
-            </a>
-            <a href="#services" class="inline-flex items-center gap-2 bg-white/15 text-white border border-white/40 font-semibold px-6 py-3 rounded-full hover:bg-white/25 transition-all backdrop-blur-sm">
-              <i class="fas fa-box-open"></i> Explore Medicines
-            </a>
-          </div>
-          <div class="flex items-center gap-6 mt-8 text-white/70 text-sm">
-            <span class="flex items-center gap-1"><i class="fas fa-check-circle text-emerald-300"></i> All diseases covered</span>
-            <span class="flex items-center gap-1"><i class="fas fa-check-circle text-emerald-300"></i> Genuine medicines</span>
-            <span class="flex items-center gap-1"><i class="fas fa-check-circle text-emerald-300"></i> Expert guidance</span>
-          </div>
-        </div>
-        <!-- right -->
-        <div class="hidden md:flex justify-center animate-slide-up">
-          <div class="relative">
-            <div class="w-72 h-72 rounded-full bg-teal-400/30 blur-3xl absolute -top-10 -right-10"></div>
-            <div class="glass-card rounded-3xl p-6 shadow-card hero-pulse flex items-center justify-center">
-              <div class="text-center">
-                <div class="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center text-white text-3xl shadow-lg mb-4">
-                  <i class="fas fa-heartbeat"></i>
-                </div>
-                <h3 class="text-xl font-bold text-gray-800">Ashok Kumar</h3>
-                <p class="text-gray-500 text-sm mb-1">Owner & Pharmacist</p>
-                <p class="text-teal-700 text-sm font-medium">G.M.C. Jammu Qualified</p>
-                <div class="mt-4 flex justify-center gap-3 text-teal-700 text-xl">
-                  <i class="fas fa-mortar-pestle"></i>
-                  <i class="fas fa-flask"></i>
-                  <i class="fas fa-pills"></i>
-                </div>
-                <div class="mt-3 text-gray-400 text-sm">
-                  <i class="fas fa-phone-alt mr-1"></i> 7006569462
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- wave divider -->
-    <div class="absolute bottom-0 left-0 w-full">
-      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" class="w-full h-12 sm:h-16">
-        <path fill="#f6f9fc" d="M0,32L48,34.7C96,37.3,192,40,288,38.7C384,37.3,480,32,576,28.3C672,24.7,768,24,864,28.7C960,33.3,1056,37.3,1152,33.3C1248,29.3,1344,20,1392,13.3L1440,6.7L1440,60L1392,60C1344,60,1248,60,1152,60C1056,60,960,60,864,60C768,60,672,60,576,60C480,60,384,60,288,60C192,60,96,60,48,60L0,60Z"></path>
-      </svg>
-    </div>
-  </section>
-
-  <!-- ====== ABOUT ====== -->
-  <section id="about" class="py-16 md:py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <span class="badge mb-3"><i class="fas fa-user-md mr-1"></i> About Us</span>
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">Trusted Medical Care, <br>Personal Touch.</h2>
-        <p class="text-gray-500 mt-4 text-lg">Ashok Medical Store is proudly run by Ashok Kumar, a qualified professional from G.M.C. Jammu, dedicated to serving the community with genuine medicines and expert guidance.</p>
-      </div>
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- card 1 -->
-        <div class="bg-gray-50 rounded-2xl p-6 shadow-card border border-gray-100 med-card">
-          <div class="w-14 h-14 rounded-xl bg-teal-100 flex items-center justify-center text-teal-600 text-2xl mb-4">
-            <i class="fas fa-graduation-cap"></i>
-          </div>
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">Qualification</h3>
-          <p class="text-gray-500 leading-relaxed">Ashok Kumar is a qualified professional from <strong>G.M.C. Jammu</strong>, bringing years of expertise in medicine and patient care to every customer.</p>
-        </div>
-        <!-- card 2 -->
-        <div class="bg-gray-50 rounded-2xl p-6 shadow-card border border-gray-100 med-card">
-          <div class="w-14 h-14 rounded-xl bg-teal-100 flex items-center justify-center text-teal-600 text-2xl mb-4">
-            <i class="fas fa-infinity"></i>
-          </div>
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">Wide Range of Medicines</h3>
-          <p class="text-gray-500 leading-relaxed">We stock every kind of medicine for almost all diseases — from common ailments to specialized treatments — ensuring you get exactly what you need.</p>
-        </div>
-        <!-- card 3 -->
-        <div class="bg-gray-50 rounded-2xl p-6 shadow-card border border-gray-100 med-card">
-          <div class="w-14 h-14 rounded-xl bg-teal-100 flex items-center justify-center text-teal-600 text-2xl mb-4">
-            <i class="fas fa-hand-holding-heart"></i>
-          </div>
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">Personalized Care</h3>
-          <p class="text-gray-500 leading-relaxed">We don’t just sell medicines — we guide you with expert advice, dosage information, and trusted recommendations for your family’s health.</p>
-        </div>
-      </div>
-      <!-- highlight bar -->
-      <div class="mt-10 bg-teal-600 text-white rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 shadow-lg">
-        <div class="text-5xl"><i class="fas fa-city"></i></div>
-        <div class="text-center md:text-left">
-          <p class="text-lg font-semibold">Serving the community with trust and care.</p>
-          <p class="text-teal-100 text-sm mt-1">Your one-stop medical store for genuine medicines, expert consultation, and reliable service.</p>
-        </div>
-        <a href="#contact" class="ml-auto bg-white text-teal-700 font-semibold px-6 py-2 rounded-full hover:bg-teal-50 transition shadow-md">Contact Now</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== SERVICES / MEDICINES ====== -->
-  <section id="services" class="py-16 md:py-20 bg-[#f6f9fc]">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <span class="badge mb-3"><i class="fas fa-boxes mr-1"></i> Our Range</span>
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">Medicines for Every Need</h2>
-        <p class="text-gray-500 mt-4 text-lg">From common fever to chronic conditions — we have it all, sourced and stored with care.</p>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- items -->
-        <div class="bg-white rounded-2xl p-6 shadow-card border border-gray-100 med-card">
-          <div class="w-12 h-12 rounded-xl bg-rose-100 flex items-center justify-center text-rose-500 text-xl mb-3"><i class="fas fa-thermometer-half"></i></div>
-          <h3 class="text-lg font-semibold text-gray-800">Common Ailments</h3>
-          <p class="text-gray-500 text-sm mt-1">Fever, cold, cough, flu, headache, body pain — quick relief medicines available.</p>
-        </div>
-        <div class="bg-white rounded-2xl p-6 shadow-card border border-gray-100 med-card">
-          <div class="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center text-blue-500 text-xl mb-3"><i class="fas fa-heart"></i></div>
-          <h3 class="text-lg font-semibold text-gray-800">Cardiac & BP</h3>
-          <p class="text-gray-500 text-sm mt-1">Blood pressure, heart care, cholesterol management — trusted brands in stock.</p>
-        </div>
-        <div class="bg-white rounded-2xl p-6 shadow-card border border-gray-100 med-card">
-          <div class="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-500 text-xl mb-3"><i class="fas fa-lungs"></i></div>
-          <h3 class="text-lg font-semibold text-gray-800">Respiratory Care</h3>
-          <p class="text-gray-500 text-sm mt-1">Asthma, inhalers, nebulizers, allergy relief — complete respiratory support.</p>
-        </div>
-        <div class="bg-white rounded-2xl p-6 shadow-card border border-gray-100 med-card">
-          <div class="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center text-purple-500 text-xl mb-3"><i class="fas fa-pills"></i></div>
-          <h3 class="text-lg font-semibold text-gray-800">Digestive & GI</h3>
-          <p class="text-gray-500 text-sm mt-1">Acidity, gastritis, constipation, enzymes — gut health solutions.</p>
-        </div>
-        <div class="bg-white rounded-2xl p-6 shadow-card border border-gray-100 med-card">
-          <div class="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center text-amber-500 text-xl mb-3"><i class="fas fa-diabetes"></i></div>
-          <h3 class="text-lg font-semibold text-gray-800">Diabetes Care</h3>
-          <p class="text-gray-500 text-sm mt-1">Insulin, glucometers, sugar control medicines and supplements.</p>
-        </div>
-        <div class="bg-white rounded-2xl p-6 shadow-card border border-gray-100 med-card">
-          <div class="w-12 h-12 rounded-xl bg-cyan-100 flex items-center justify-center text-cyan-500 text-xl mb-3"><i class="fas fa-baby"></i></div>
-          <h3 class="text-lg font-semibold text-gray-800">Pediatrics & Maternity</h3>
-          <p class="text-gray-500 text-sm mt-1">Baby care, maternal health, pregnancy supplements, infant medicines.</p>
-        </div>
-        <div class="bg-white rounded-2xl p-6 shadow-card border border-gray-100 med-card">
-          <div class="w-12 h-12 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-500 text-xl mb-3"><i class="fas fa-band-aid"></i></div>
-          <h3 class="text-lg font-semibold text-gray-800">Wound & First Aid</h3>
-          <p class="text-gray-500 text-sm mt-1">Antiseptics, bandages, ointments, surgical supplies — always ready.</p>
-        </div>
-        <div class="bg-white rounded-2xl p-6 shadow-card border border-gray-100 med-card">
-          <div class="w-12 h-12 rounded-xl bg-teal-100 flex items-center justify-center text-teal-500 text-xl mb-3"><i class="fas fa-vial"></i></div>
-          <h3 class="text-lg font-semibold text-gray-800">Vitamins & Supplements</h3>
-          <p class="text-gray-500 text-sm mt-1">Multivitamins, minerals, immunity boosters, protein & nutrition support.</p>
-        </div>
-        <div class="bg-white rounded-2xl p-6 shadow-card border border-gray-100 med-card">
-          <div class="w-12 h-12 rounded-xl bg-gray-200 flex items-center justify-center text-gray-500 text-xl mb-3"><i class="fas fa-ambulance"></i></div>
-          <h3 class="text-lg font-semibold text-gray-800">Prescription & Specialty</h3>
-          <p class="text-gray-500 text-sm mt-1">Prescription medicines for all diseases, specialty drugs, and referral support.</p>
-        </div>
-      </div>
-      <div class="mt-10 text-center">
-        <p class="text-gray-500 text-sm mb-2"><i class="fas fa-info-circle text-teal-600"></i> We have every kind of medicine for almost all diseases.</p>
-        <a href="#contact" class="inline-flex items-center gap-2 text-teal-700 font-semibold underline underline-offset-2 hover:text-teal-900 transition">
-          <i class="fas fa-phone-alt"></i> Call us to find what you need: 7006569462
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== WHY CHOOSE US ====== -->
-  <section class="py-16 md:py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8">
-      <div class="grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <span class="badge mb-3"><i class="fas fa-shield-alt mr-1"></i> Why Choose Us</span>
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">Genuine Medicines. <br class="hidden sm:block"> Expert Guidance.</h2>
-          <ul class="space-y-4 mt-6">
-            <li class="flex items-start gap-3 text-gray-600">
-              <span class="text-teal-600 text-xl mt-0.5"><i class="fas fa-check-circle"></i></span>
-              <span><strong>Qualified Owner:</strong> Ashok Kumar, G.M.C. Jammu, personally oversees quality and care.</span>
-            </li>
-            <li class="flex items-start gap-3 text-gray-600">
-              <span class="text-teal-600 text-xl mt-0.5"><i class="fas fa-check-circle"></i></span>
-              <span><strong>Every Disease Covered:</strong> We stock medicines for almost all illnesses — from common to critical.</span>
-            </li>
-            <li class="flex items-start gap-3 text-gray-600">
-              <span class="text-teal-600 text-xl mt-0.5"><i class="fas fa-check-circle"></i></span>
-              <span><strong>Trusted Brands:</strong> Only genuine, properly stored medicines — no compromises.</span>
-            </li>
-            <li class="flex items-start gap-3 text-gray-600">
-              <span class="text-teal-600 text-xl mt-0.5"><i class="fas fa-check-circle"></i></span>
-              <span><strong>Personal Advice:</strong> Expert guidance on dosage, usage, and precautions.</span>
-            </li>
-            <li class="flex items-start gap-3 text-gray-600">
-              <span class="text-teal-600 text-xl mt-0.5"><i class="fas fa-check-circle"></i></span>
-              <span><strong>Easy Contact:</strong> Call us anytime at <span class="font-semibold text-teal-700">7006569462</span> for orders and queries.</span>
-            </li>
-          </ul>
-        </div>
-        <div class="bg-gradient-to-br from-teal-50 to-teal-100 rounded-3xl p-8 shadow-inner flex items-center justify-center">
-          <div class="text-center">
-            <div class="text-7xl mb-4"><i class="fas fa-hand-holding-medical text-teal-600"></i></div>
-            <p class="text-gray-700 font-semibold text-lg">Your health is our responsibility.</p>
-            <p class="text-gray-500 text-sm mt-1">— Ashok Kumar, Owner</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== FAQ ====== -->
-  <section id="faq" class="py-16 md:py-20 bg-[#f6f9fc]">
-    <div class="max-w-4xl mx-auto px-5 sm:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <span class="badge mb-3"><i class="fas fa-question-circle mr-1"></i> FAQ</span>
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">Questions? We’re Here.</h2>
-      </div>
-      <div class="space-y-3">
-        <div class="faq-item bg-white rounded-xl p-5 shadow-card border border-gray-100">
-          <h3 class="font-semibold text-gray-800 text-lg flex items-start gap-3">
-            <span class="text-teal-600 mt-0.5"><i class="fas fa-globe-asia"></i></span>
-            Do you have medicines for all diseases?
-            <i class="fas fa-chevron-down text-gray-400 ml-auto text-sm"></i>
-          </h3>
-          <p class="text-gray-500 mt-2 leading-relaxed pl-10 border-l-2 border-teal-200 pl-4">Yes! Ashok Medical Store stocks every kind of medicine for almost all diseases. If we don’t have something in stock, we’ll source it for you — just call us at <span class="font-semibold">7006569462</span>.</p>
-        </div>
-        <div class="faq-item bg-white rounded-xl p-5 shadow-card border border-gray-100">
-          <h3 class="font-semibold text-gray-800 text-lg flex items-start gap-3">
-            <span class="text-teal-600 mt-0.5"><i class="fas fa-user-md"></i></span>
-            Who owns the store and what’s their qualification?
-            <i class="fas fa-chevron-down text-gray-400 ml-auto text-sm"></i>
-          </h3>
-          <p class="text-gray-500 mt-2 leading-relaxed pl-10 border-l-2 border-teal-200 pl-4">Ashok Medical Store is owned by <strong>Ashok Kumar</strong>, who is a qualified professional from <strong>G.M.C. Jammu</strong>. His expertise ensures you receive genuine medicines and sound medical guidance.</p>
-        </div>
-        <div class="faq-item bg-white rounded-xl p-5 shadow-card border border-gray-100">
-          <h3 class="font-semibold text-gray-800 text-lg flex items-start gap-3">
-            <span class="text-teal-600 mt-0.5"><i class="fas fa-phone-alt"></i></span>
-            How can I contact you for an order?
-            <i class="fas fa-chevron-down text-gray-400 ml-auto text-sm"></i>
-          </h3>
-          <p class="text-gray-500 mt-2 leading-relaxed pl-10 border-l-2 border-teal-200 pl-4">Simply call us at <span class="font-semibold text-lg">7006569462</span>. You can also visit our store to speak with Ashok Kumar directly. We’re happy to help with prescriptions, orders, and advice.</p>
-        </div>
-        <div class="faq-item bg-white rounded-xl p-5 shadow-card border border-gray-100">
-          <h3 class="font-semibold text-gray-800 text-lg flex items-start gap-3">
-            <span class="text-teal-600 mt-0.5"><i class="fas fa-clock"></i></span>
-            What are your timings?
-            <i class="fas fa-chevron-down text-gray-400 ml-auto text-sm"></i>
-          </h3>
-          <p class="text-gray-500 mt-2 leading-relaxed pl-10 border-l-2 border-teal-200 pl-4">Our pharmacy is open every day to serve you. For exact timings and holidays, please call <span class="font-semibold">7006569462</span> and we’ll guide you.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== CONTACT ====== -->
-  <section id="contact" class="py-16 md:py-20 gradient-hero relative overflow-hidden">
-    <div class="absolute inset-0 opacity-10">
-      <div class="w-full h-full" style="background-image: radial-gradient(circle at 80% 20%, rgba(255,255,255,0.2) 0%, transparent 60%), radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%);"></div>
-    </div>
-    <div class="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
-      <div class="grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <span class="badge bg-white/20 text-white border border-white/20 mb-3"><i class="fas fa-envelope mr-1"></i> Contact</span>
-          <h2 class="text-3xl md:text-4xl font-bold text-white mt-2 mb-3">Let’s Connect</h2>
-          <p class="text-white/80 text-lg mb-6">Have a question, need a medicine, or want guidance? Reach out to us anytime.</p>
-          <div class="space-y-5">
-            <div class="flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-xl px-5 py-4 border border-white/10">
-              <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white text-lg"><i class="fas fa-phone-alt"></i></div>
-              <div>
-                <p class="text-white/60 text-sm">Phone</p>
-                <p class="text-white font-semibold text-lg">7006569462</p>
-              </div>
-            </div>
-            <div class="flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-xl px-5 py-4 border border-white/10">
-              <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white text-lg"><i class="fas fa-map-marker-alt"></i></div>
-              <div>
-                <p class="text-white/60 text-sm">Visit Us</p>
-                <p class="text-white font-semibold">Ashok Medical Store — Your trusted pharmacy</p>
-              </div>
-            </div>
-            <div class="flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-xl px-5 py-4 border border-white/10">
-              <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white text-lg"><i class="fas fa-clock"></i></div>
-              <div>
-                <p class="text-white/60 text-sm">Timings</p>
-                <p class="text-white font-semibold">Open daily — please call for details</p>
-              </div>
-            </div>
-          </div>
-          <a href="tel:7006569462" class="inline-flex items-center gap-2 bg-white text-teal-800 font-semibold px-7 py-3 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105 mt-6 contact-btn">
-            <i class="fas fa-phone-alt"></i> Call Now: 7006569462
-          </a>
-        </div>
-        <!-- map placeholder -->
-        <div class="rounded-3xl overflow-hidden shadow-2xl border-0 map-placeholder">
-          <div class="w-full h-full bg-white/40 backdrop-blur-sm flex flex-col items-center justify-center text-gray-500">
-            <div class="text-5xl mb-3"><i class="fas fa-map-marked-alt"></i></div>
-            <p class="text-lg font-semibold text-gray-600">Ashok Medical Store</p>
-            <p class="text-gray-400 text-sm">Call us at <span class="font-semibold text-teal-700">7006569462</span> for exact address.</p>
-            <div class="mt-3 text-gray-300 text-xs"><i class="fas fa-globe mr-1"></i> Location coming soon — reachable by phone 24/7</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== FOOTER ====== -->
-  <footer class="bg-gray-900 text-gray-300 py-10">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-        <div class="flex items-center gap-2 text-white">
-          <span class="text-2xl"><i class="fas fa-prescription-bottle-alt text-teal-400"></i></span>
-          <span class="font-bold text-lg">Ashok <span class="text-teal-400">Medical</span> Store</span>
-        </div>
-        <div class="flex flex-wrap justify-center gap-6 text-sm">
-          <span class="hover:text-white transition"><i class="fas fa-phone-alt mr-1 text-teal-400"></i> <span class="phone-number">7006569462</span></span>
-          <span class="hover:text-white transition"><i class="fas fa-user-md mr-1 text-teal-400"></i> Ashok Kumar</span>
-          <span class="hover:text-white transition"><i class="fas fa-graduation-cap mr-1 text-teal-400"></i> G.M.C. Jammu</span>
-        </div>
-        <div class="text-sm text-gray-500">
-          © 2025 Ashok Medical Store. All rights reserved.
-        </div>
-      </div>
-      <div class="mt-6 text-center text-gray-500 text-sm border-t border-gray-800 pt-5">
-        <p>Your trusted pharmacy — medicines for every disease, with care & expertise.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ====== JAVASCRIPT ====== -->
-  <script>
-    (function() {
-      // Mobile menu toggle
-      const menuBtn = document.getElementById('mobileMenuBtn');
-      const mobileMenu = document.getElementById('mobileMenu');
-      if (menuBtn && mobileMenu) {
-        menuBtn.addEventListener('click', function(e) {
-          e.stopPropagation();
-          mobileMenu.classList.toggle('hidden');
-          const icon = menuBtn.querySelector('i');
-          if (icon) {
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-times');
-          }
-        });
-        // close on link click
-        mobileMenu.querySelectorAll('a').forEach(function(link) {
-          link.addEventListener('click', function() {
-            mobileMenu.classList.add('hidden');
-            const icon = menuBtn.querySelector('i');
-            if (icon) {
-              icon.classList.add('fa-bars');
-              icon.classList.remove('fa-times');
-            }
-          });
-        });
-        // close on outside click
-        document.addEventListener('click', function(e) {
-          if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
-            mobileMenu.classList.add('hidden');
-            const icon = menuBtn.querySelector('i');
-            if (icon) {
-              icon.classList.add('fa-bars');
-              icon.classList.remove('fa-times');
-            }
-          }
-        });
-      }
-
-      // Smooth scroll for anchor links
-      document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-        anchor.addEventListener('click', function(e) {
-          const href = this.getAttribute('href');
-          if (href === '#' || href === '') return;
-          const target = document.querySelector(href);
-          if (target) {
-            e.preventDefault();
-            const offset = 80; // nav height
-            const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
-            window.scrollTo({ top: top, behavior: 'smooth' });
-          }
-        });
-      });
-
-      // Navbar background on scroll
-      const nav = document.querySelector('nav');
-      if (nav) {
-        window.addEventListener('scroll', function() {
-          if (window.scrollY > 20) {
-            nav.classList.add('shadow-md', 'bg-white/95');
-            nav.classList.remove('bg-white/70');
-          } else {
-            nav.classList.remove('shadow-md', 'bg-white/95');
-            nav.classList.add('bg-white/70');
-          }
-        });
-      }
-
-      // FAQ accordion (simple toggle)
-      const faqItems = document.querySelectorAll('.faq-item');
-      faqItems.forEach(function(item) {
-        const header = item.querySelector('h3');
-        const answer = item.querySelector('p');
-        if (header && answer) {
-          header.addEventListener('click', function(e) {
-            // toggle visibility
-            const isVisible = answer.style.display !== 'none' && answer.style.display !== '';
-            // hide all others
-            faqItems.forEach(function(other) {
-              const oAnswer = other.querySelector('p');
-              const oHeader = other.querySelector('h3');
-              if (oAnswer && oHeader && other !== item) {
-                oAnswer.style.display = 'none';
-                const chevron = oHeader.querySelector('.fa-chevron-down');
-                if (chevron) chevron.style.transform = 'rotate(0deg)';
-              }
-            });
-            if (isVisible) {
-              answer.style.display = 'none';
-              const chevron = header.querySelector('.fa-chevron-down');
-              if (chevron) chevron.style.transform = 'rotate(0deg)';
-            } else {
-              answer.style.display = 'block';
-              const chevron = header.querySelector('.fa-chevron-down');
-              if (chevron) chevron.style.transform = 'rotate(180deg)';
-            }
-          });
-        }
-      });
-    })();
-  </script>
-
-</body>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+      </body>
 </html>
